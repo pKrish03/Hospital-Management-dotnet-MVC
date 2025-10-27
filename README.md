@@ -128,3 +128,6 @@ Press F5 or
 Click "Run" → "Start Debugging" or
 Open terminal in VS Code and run dotnet run
 Browser will automatically open at http://localhost:5000
+
+screenshot:
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 155713" src="https://github.com/user-attachments/assets/67a1fb14-c314-414d-a020-11e5410c05ec" />
