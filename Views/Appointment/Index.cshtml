@@ -1,0 +1,74 @@
+@model List<HospitalManagement.Models.Appointment>
+
+@{
+    ViewData["Title"] = "Appointment Management";
+}
+
+<div class="dashboard-card">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>
+            <img src="~/images/appointment-icon.png" alt="Appointments" style="width: 40px; height: 40px;" />
+            Appointment Management
+        </h2>
+        <a href="@Url.Action("Create")" class="btn btn-primary">
+            + Schedule New Appointment
+        </a>
+    </div>
+
+    @if (Model != null && Model.Count > 0)
+    {
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Appointment ID</th>
+                        <th>Patient Name</th>
+                        <th>Doctor Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var appointment in Model)
+                    {
+                        <tr>
+                            <td>@appointment.AppointmentId</td>
+                            <td>@appointment.PatientName</td>
+                            <td>@appointment.DoctorName</td>
+                            <td>@appointment.AppointmentDate.ToString("dd MMM yyyy")</td>
+                            <td>@appointment.AppointmentTime</td>
+                            <td>@appointment.Reason</td>
+                            <td>
+                                @if (appointment.Status == "Scheduled")
+                                {
+                                    <span class="badge badge-info">@appointment.Status</span>
+                                }
+                                else if (appointment.Status == "Completed")
+                                {
+                                    <span class="badge badge-success">@appointment.Status</span>
+                                }
+                                else
+                                {
+                                    <span class="badge badge-danger">@appointment.Status</span>
+                                }
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Edit", new { id = appointment.AppointmentId })" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="@Url.Action("Delete", new { id = appointment.AppointmentId })" class="btn btn-danger btn-sm">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            <strong>No appointments found!</strong> Click "Schedule New Appointment" button to book appointments.
+        </div>
+    }
+</div>

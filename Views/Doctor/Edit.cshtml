@@ -1,0 +1,118 @@
+@model HospitalManagement.Models.Doctor
+
+@{
+    ViewData["Title"] = "Edit Doctor";
+}
+
+<div class="form-card">
+    <h2>
+        <img src="~/images/doctor-icon.png" alt="Doctor" />
+        Edit Doctor Information
+    </h2>
+
+    <form asp-action="Edit" method="post">
+        <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
+
+        <input type="hidden" asp-for="DoctorId" />
+        <input type="hidden" asp-for="JoinedDate" />
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" placeholder="Enter full name" />
+                    <span asp-validation-for="Name" class="field-validation-error"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Specialization"></label>
+                    <select asp-for="Specialization" class="form-select">
+                        <option value="">Select Specialization</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="Orthopedics">Orthopedics</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                        <option value="Gynecology">Gynecology</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="ENT">ENT</option>
+                        <option value="General Medicine">General Medicine</option>
+                        <option value="Surgery">Surgery</option>
+                        <option value="Dentistry">Dentistry</option>
+                    </select>
+                    <span asp-validation-for="Specialization" class="field-validation-error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Qualification"></label>
+                    <input asp-for="Qualification" class="form-control" placeholder="e.g., MBBS, MD" />
+                    <span asp-validation-for="Qualification" class="field-validation-error"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Experience"></label>
+                    <input asp-for="Experience" class="form-control" placeholder="Years of experience" />
+                    <span asp-validation-for="Experience" class="field-validation-error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Contact"></label>
+                    <input asp-for="Contact" class="form-control" placeholder="Enter contact number" />
+                    <span asp-validation-for="Contact" class="field-validation-error"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" placeholder="Enter email address" />
+                    <span asp-validation-for="Email" class="field-validation-error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="ConsultationFee"></label>
+                    <input asp-for="ConsultationFee" class="form-control" placeholder="Enter consultation fee" />
+                    <span asp-validation-for="ConsultationFee" class="field-validation-error"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="ConsultationTime"></label>
+                    <input asp-for="ConsultationTime" class="form-control" placeholder="e.g., 9:00 AM - 5:00 PM" />
+                    <span asp-validation-for="ConsultationTime" class="field-validation-error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="AvailableDays"></label>
+            <input asp-for="AvailableDays" class="form-control" placeholder="e.g., Monday, Tuesday, Wednesday" />
+            <span asp-validation-for="AvailableDays" class="field-validation-error"></span>
+        </div>
+
+        <div class="mt-4">
+            <button type="submit" class="btn btn-primary">Update Doctor</button>
+            <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

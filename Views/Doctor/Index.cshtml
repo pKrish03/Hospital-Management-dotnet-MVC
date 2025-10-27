@@ -1,0 +1,61 @@
+@model List<HospitalManagement.Models.Doctor>
+
+@{
+    ViewData["Title"] = "Doctor Management";
+}
+
+<div class="dashboard-card">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>
+            <img src="~/images/doctor-icon.png" alt="Doctors" style="width: 40px; height: 40px;" />
+            Doctor Management
+        </h2>
+        <a href="@Url.Action("Create")" class="btn btn-primary">
+            + Add New Doctor
+        </a>
+    </div>
+
+    @if (Model != null && Model.Count > 0)
+    {
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Doctor ID</th>
+                        <th>Name</th>
+                        <th>Specialization</th>
+                        <th>Experience</th>
+                        <th>Contact</th>
+                        <th>Consultation Fee</th>
+                        <th>Available Days</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var doctor in Model)
+                    {
+                        <tr>
+                            <td>@doctor.DoctorId</td>
+                            <td>@doctor.Name</td>
+                            <td><span class="badge badge-info">@doctor.Specialization</span></td>
+                            <td>@doctor.Experience years</td>
+                            <td>@doctor.Contact</td>
+                            <td>₹@doctor.ConsultationFee</td>
+                            <td>@doctor.AvailableDays</td>
+                            <td>
+                                <a href="@Url.Action("Edit", new { id = doctor.DoctorId })" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="@Url.Action("Delete", new { id = doctor.DoctorId })" class="btn btn-danger btn-sm">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            <strong>No doctors found!</strong> Click "Add New Doctor" button to add doctors.
+        </div>
+    }
+</div>

@@ -1,0 +1,126 @@
+@model HospitalManagement.Models.Appointment
+
+@{
+    ViewData["Title"] = "Delete Appointment";
+}
+
+<div class="form-card">
+    <h2 style="color: #dc3545;">
+        <img src="~/images/appointment-icon.png" alt="Appointment" />
+        Cancel Appointment
+    </h2>
+
+    <div class="alert alert-danger">
+        <h4>⚠️ Are you sure you want to cancel this appointment?</h4>
+        <p>This action cannot be undone. The appointment will be permanently removed.</p>
+    </div>
+
+    <div class="card" style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin: 20px 0;">
+        <h3>Appointment Details:</h3>
+        <hr />
+        
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <strong>Appointment ID:</strong>
+            </div>
+            <div class="col-md-9">
+                @Model.AppointmentId
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <strong>Patient Name:</strong>
+            </div>
+            <div class="col-md-9">
+                @Model.PatientName
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <strong>Doctor Name:</strong>
+            </div>
+            <div class="col-md-9">
+                @Model.DoctorName
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <strong>Appointment Date:</strong>
+            </div>
+            <div class="col-md-9">
+                @Model.AppointmentDate.ToString("dd MMM yyyy")
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <strong>Appointment Time:</strong>
+            </div>
+            <div class="col-md-9">
+                @Model.AppointmentTime
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <strong>Reason:</strong>
+            </div>
+            <div class="col-md-9">
+                @Model.Reason
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <strong>Status:</strong>
+            </div>
+            <div class="col-md-9">
+                @if (Model.Status == "Scheduled")
+                {
+                    <span class="badge badge-info">@Model.Status</span>
+                }
+                else if (Model.Status == "Completed")
+                {
+                    <span class="badge badge-success">@Model.Status</span>
+                }
+                else
+                {
+                    <span class="badge badge-danger">@Model.Status</span>
+                }
+            </div>
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.Notes))
+        {
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <strong>Notes:</strong>
+                </div>
+                <div class="col-md-9">
+                    @Model.Notes
+                </div>
+            </div>
+        }
+
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <strong>Created Date:</strong>
+            </div>
+            <div class="col-md-9">
+                @Model.CreatedDate.ToString("dd MMM yyyy HH:mm")
+            </div>
+        </div>
+    </div>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="AppointmentId" />
+        
+        <div class="mt-4">
+            <button type="submit" class="btn btn-danger">Yes, Cancel Appointment</button>
+            <a href="@Url.Action("Index")" class="btn btn-secondary">Go Back</a>
+        </div>
+    </form>
+</div>

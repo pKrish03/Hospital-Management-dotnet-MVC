@@ -1,0 +1,61 @@
+@model List<HospitalManagement.Models.Patient>
+
+@{
+    ViewData["Title"] = "Patient Management";
+}
+
+<div class="dashboard-card">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>
+            <img src="~/images/patient-icon.png" alt="Patients" style="width: 40px; height: 40px;" />
+            Patient Management
+        </h2>
+        <a href="@Url.Action("Create")" class="btn btn-primary">
+            + Add New Patient
+        </a>
+    </div>
+
+    @if (Model != null && Model.Count > 0)
+    {
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Contact</th>
+                        <th>Blood Group</th>
+                        <th>Registered Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var patient in Model)
+                    {
+                        <tr>
+                            <td>@patient.PatientId</td>
+                            <td>@patient.Name</td>
+                            <td>@patient.Age</td>
+                            <td>@patient.Gender</td>
+                            <td>@patient.Contact</td>
+                            <td><span class="badge badge-info">@patient.BloodGroup</span></td>
+                            <td>@patient.RegisteredDate.ToString("dd MMM yyyy")</td>
+                            <td>
+                                <a href="@Url.Action("Edit", new { id = patient.PatientId })" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="@Url.Action("Delete", new { id = patient.PatientId })" class="btn btn-danger btn-sm">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            <strong>No patients found!</strong> Click "Add New Patient" button to register patients.
+        </div>
+    }
+</div>

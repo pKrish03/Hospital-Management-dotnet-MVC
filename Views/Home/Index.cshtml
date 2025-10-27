@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="hero-section">
+    <img src="~/images/hospital-banner.jpg" alt="Hospital Banner" />
+    <!-- PASTE IMAGE: wwwroot/images/hospital-banner.jpg (800x350px recommended) -->
+    <h1>Welcome to City Care Hospital</h1>
+    <p>Your health is our priority - Providing quality healthcare services 24/7</p>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="stat-card">
+            <img src="~/images/patient-icon.png" alt="Patients" />
+            <!-- PASTE IMAGE: wwwroot/images/patient-icon.png (60x60px) -->
+            <h3>@ViewBag.PatientCount</h3>
+            <p>Total Patients</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="stat-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <img src="~/images/doctor-icon.png" alt="Doctors" />
+            <!-- PASTE IMAGE: wwwroot/images/doctor-icon.png (60x60px) -->
+            <h3>@ViewBag.DoctorCount</h3>
+            <p>Total Doctors</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="stat-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+            <img src="~/images/appointment-icon.png" alt="Appointments" />
+            <!-- PASTE IMAGE: wwwroot/images/appointment-icon.png (60x60px) -->
+            <h3>@ViewBag.AppointmentCount</h3>
+            <p>Total Appointments</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="stat-card" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+            <img src="~/images/report-icon.png" alt="Today" />
+            <!-- PASTE IMAGE: wwwroot/images/report-icon.png (60x60px) -->
+            <h3>@ViewBag.TodayAppointments</h3>
+            <p>Today's Appointments</p>
+        </div>
+    </div>
+</div>
+
+<div class="feature-cards">
+    <div class="feature-card">
+        <img src="~/images/patient-icon.png" alt="Patient Management" />
+        <h3>Patient Management</h3>
+        <p>Register new patients, update medical records, and manage patient information efficiently with our comprehensive system.</p>
+        <a href="@Url.Action("Index", "Patient")" class="btn btn-primary">Manage Patients</a>
+    </div>
+
+    <div class="feature-card">
+        <img src="~/images/doctor-icon.png" alt="Doctor Management" />
+        <h3>Doctor Management</h3>
+        <p>Add doctors, manage specializations, track schedules and consultation timings for better hospital operations.</p>
+        <a href="@Url.Action("Index", "Doctor")" class="btn btn-primary">Manage Doctors</a>
+    </div>
+
+    <div class="feature-card">
+        <img src="~/images/appointment-icon.png" alt="Appointments" />
+        <h3>Appointment Booking</h3>
+        <p>Schedule appointments, track bookings and manage patient-doctor meetings seamlessly through our platform.</p>
+        <a href="@Url.Action("Index", "Appointment")" class="btn btn-primary">Book Appointment</a>
+    </div>
+
+    <div class="feature-card">
+        <img src="~/images/report-icon.png" alt="Reports" />
+        <h3>Reports & Analytics</h3>
+        <p>Generate comprehensive reports, view hospital statistics and analyze data for better decision making.</p>
+        <a href="#" class="btn btn-primary">View Reports</a>
+    </div>
+</div>
