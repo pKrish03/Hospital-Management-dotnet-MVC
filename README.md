@@ -138,14 +138,10 @@ screenshot:
 <img width="1920" height="1200" alt="Screenshot 2025-10-27 155629" src="https://github.com/user-attachments/assets/bf245b79-b87d-4e7a-b39e-ba23ca4a9f0b" />
 <img width="1920" height="1200" alt="Screenshot 2025-10-27 155659" src="https://github.com/user-attachments/assets/7c2fdca0-ddac-43c0-9ae6-6cc5d4325a57" />
 <img width="1920" height="1200" alt="Screenshot 2025-10-27 155713" src="https://github.com/user-attachments/assets/13e54966-5133-46d1-877b-24a6ff65f32a" />
-Firebase Database
 <img width="1920" height="1200" alt="Screenshot 2025-10-27 160037" src="https://github.com/user-attachments/assets/28ad776b-a875-489c-8d2b-a1a4fa5e1ca3" />
-Appointments
 <img width="1920" height="1200" alt="Screenshot 2025-10-27 155950" src="https://github.com/user-attachments/assets/464b7c2f-d282-471b-b682-333e5af105b4" />
-Doctors
 <img width="1920" height="1200" alt="Screenshot 2025-10-27 160116" src="https://github.com/user-attachments/assets/0c35568a-3cc3-40a7-8d61-f3db05cd7c81" />
 <img width="1920" height="1200" alt="Screenshot 2025-10-27 160132" src="https://github.com/user-attachments/assets/fd93b0eb-c465-4f45-864a-ee478c6bf4d4" />
-Patients
 <img width="1920" height="1200" alt="Screenshot 2025-10-27 160150" src="https://github.com/user-attachments/assets/2bfc2a14-d81a-4794-aa75-dd00962d6bd1" />
 <img width="1920" height="1200" alt="Screenshot 2025-10-27 160520" src="https://github.com/user-attachments/assets/9f9efeea-0586-475b-878f-ca7d1e6245b4" />
 
