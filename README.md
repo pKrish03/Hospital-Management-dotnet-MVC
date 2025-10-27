@@ -130,4 +130,34 @@ Open terminal in VS Code and run dotnet run
 Browser will automatically open at http://localhost:5000
 
 screenshot:
-<img width="1920" height="1200" alt="Screenshot 2025-10-27 155713" src="https://github.com/user-attachments/assets/67a1fb14-c314-414d-a020-11e5410c05ec" />
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 155105" src="https://github.com/user-attachments/assets/889a6a66-b0a4-4e05-a976-112f1c3dd69f" />
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 155134" src="https://github.com/user-attachments/assets/93129f97-4506-4bb7-97e7-5407282df19d" />
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 155512" src="https://github.com/user-attachments/assets/f94de056-db97-4cfd-967a-bb211dfb2d94" />
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 155528" src="https://github.com/user-attachments/assets/82bd5b65-89b7-45c8-a35b-c68c4d39f264" />
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 155611" src="https://github.com/user-attachments/assets/efbdae22-636c-4a33-ac3f-6725dfb3c395" />
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 155629" src="https://github.com/user-attachments/assets/bf245b79-b87d-4e7a-b39e-ba23ca4a9f0b" />
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 155659" src="https://github.com/user-attachments/assets/7c2fdca0-ddac-43c0-9ae6-6cc5d4325a57" />
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 155713" src="https://github.com/user-attachments/assets/13e54966-5133-46d1-877b-24a6ff65f32a" />
+Firebase Database
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 160037" src="https://github.com/user-attachments/assets/28ad776b-a875-489c-8d2b-a1a4fa5e1ca3" />
+Appointments
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 155950" src="https://github.com/user-attachments/assets/464b7c2f-d282-471b-b682-333e5af105b4" />
+Doctors
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 160116" src="https://github.com/user-attachments/assets/0c35568a-3cc3-40a7-8d61-f3db05cd7c81" />
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 160132" src="https://github.com/user-attachments/assets/fd93b0eb-c465-4f45-864a-ee478c6bf4d4" />
+Patients
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 160150" src="https://github.com/user-attachments/assets/2bfc2a14-d81a-4794-aa75-dd00962d6bd1" />
+<img width="1920" height="1200" alt="Screenshot 2025-10-27 160520" src="https://github.com/user-attachments/assets/9f9efeea-0586-475b-878f-ca7d1e6245b4" />
+
+
+
+
+
+
+
+
+
+
+
+
+
