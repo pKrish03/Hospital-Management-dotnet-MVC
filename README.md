@@ -72,6 +72,8 @@ Open terminal/command prompt in the extracted folder
 Step 2: Restore Dependencies
 bash# Restore all NuGet packages
 dotnet restore
+dotnet add package FirebaseAdmin --version 2.4.0
+dotnet add package Google.Apis.Auth --version 1.64.0
 
 # This will install all required dependencies
 Expected Output:
